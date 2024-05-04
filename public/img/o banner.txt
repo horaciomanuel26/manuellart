@@ -1,2 +1,0 @@
-o banner deve ter um tamanho de:
-1180x440
