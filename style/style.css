@@ -40,12 +40,17 @@ body{
     width: 80%;
     margin: 0 auto;
 
-    column-count: 8;
+    column-count: 6;
     column-gap: 5px;
 }
 .trabalho .cada .cadaimagens img{
     width: 100%;
     border-radius: 12px;
+    transition: 2s;
+}
+.cadaimagens img:hover {
+    transform: scale(1.50);
+    box-shadow: 0 0 12px 2px black;
 }
 /**/
 .sobre_nos{
@@ -83,12 +88,12 @@ body{
 .social-icon {
     margin: 0 15px; /* Espaçamento maior entre os ícones */
     color: #fff; /* Cor branca para os ícones */
-    font-size: 28px; /* Tamanho maior dos ícones para destaque */
+    font-size: 30px; /* Tamanho maior dos ícones para destaque */
     text-decoration: none;
     transition: color 0.3s, transform 0.3s; /* Transição suave para cor e movimento */
 }
 
 .social-icon:hover {
     color: #1DA1F2; /* Cor azul-clara ao passar o mouse (você pode ajustar) */
-    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+    transform: scale(1.50); /* Aumenta o ícone ao passar o mouse */
 }
