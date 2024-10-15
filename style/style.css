@@ -1,264 +1,94 @@
-* {
+*{
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.sobra {
-    background-color: #000000ad;
-    height: 500px;
-    width: 100%;
+body{
+    background-color: black;
 }
-
-.cabeca {
-    width: 100%;
-    height: 500px;
-    background-position: center;
+.cabeca{
+    background-image: url("/imagens/102.jpg");
     background-size: cover;
-    background-image: url("/imagens/10.jpg");
-}
-
-.menu {
+    background-position: center;
     width: 100%;
+    height: 600px;
+    padding: 20px;
+}
+.menu{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 20px 0;
-    position: relative;
-}
-
-.menu .logo a {
-    color: #ffffff;
-    font-size: 25px;
-    transition: 0.6s;
-}
-
-.menu .logo a:hover {
-    font-size: 50px;
-    background-color: white;
-    color: #000000;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 5px;
-}
-
-/* Links do Menu */
-.menu .link {
-    display: flex;
-    gap: 20px;
-}
-
-/* Estilo do ícone de hambúrguer */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 30px;
-    color: white;
-    position: absolute;
-    right: 20px; /* Posicionando na direita */
-    top: 20px;
-}
-
-.menu .link a {
-    color: #ffffff;
-    margin: 20px;
-    padding: 5px;
-    transition: 0.6s;
-}
-
-.menu .link a:hover {
-    color: #000000;
-    background-color: #ffffff;
-}
-
-/* Sobre Nós */
-.sobre_nos {
-    background-color: #282828;
-    width: 100%;
-    height: auto;
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sobre_nos .texto {
-    color: #ffffff;
-    text-align: center;
-    width: 80%;
-    font-size: 15px;
-}
-
-.sobre_nos .texto h2 {
-    color: #eb849d;
-}
-
-/* Trabalhos */
-.trabalhos h2 {
-    font-size: 30px;
-    color: #ffffff;
-    background-color: #eb849d;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.trabalho_todo {
-    padding: 50px 0;
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
-    columns: 3;
 }
-
-.trabalho_todo img {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 3px 0px black;
-    margin: 5px;
-}
-
-/* Contactos */
-.contactos {
-    background-color: #000000;
+.menu a{
     color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 0;
-    width: 100%;
 }
+.cabeca .texto{
+    color: white;
+    text-align: center;
+    margin-top: 250px;
+}
+/*---------------------*/
+.trabalho .cada .tema{
+    color: white;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+.trabalho .cada .cadaimagens{
+    width: 80%;
+    margin: 0 auto;
 
-.contactos .cada {
-    width: 40%;
+    column-count: 8;
+    column-gap: 5px;
+}
+.trabalho .cada .cadaimagens img{
+    width: 100%;
+    border-radius: 12px;
+}
+/**/
+.sobre_nos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0 auto;
+    width: 80%;
+}
+.sobre_nos .es{
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+}
+.sobre_nos .di{
+    width: 500px;
     margin: 20px;
 }
-
-.contactos h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
+.sobre_nos .di img{
+    width: 100%;
+}
+.tema{
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+/**/
+.contactos {
+    text-align: center; /* Centraliza os ícones no rodapé */
+    padding: 20px 0; /* Espaçamento superior e inferior */
+    background-color: #000; /* Fundo preto */
 }
 
-.contactos p {
-    font-size: 16px;
-    line-height: 1.6;
+.social-icon {
+    margin: 0 15px; /* Espaçamento maior entre os ícones */
+    color: #fff; /* Cor branca para os ícones */
+    font-size: 28px; /* Tamanho maior dos ícones para destaque */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Transição suave para cor e movimento */
 }
 
-.contactos a {
-    display: block;
-    color: #ffffff;
-    margin: 10px 0;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.contactos a:hover {
-    color: #00ff7f;
-}
-
-.contactos a i {
-    margin-right: 10px;
-}
-
-/* Responsividade para tablets e dispositivos móveis */
-@media (max-width: 1024px) {
-    .menu {
-        flex-direction: column;
-    }
-
-    .menu .link a {
-        margin: 10px 0;
-    }
-
-    .trabalho_todo {
-        columns: 2;
-    }
-
-    .sobre_nos .texto {
-        width: 90%;
-    }
-
-    .contactos .cada {
-        width: 45%;
-    }
-}
-
-@media (max-width: 768px) {
-    .trabalho_todo {
-        columns: 2;
-    }
-
-    .contactos {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contactos .cada {
-        width: 80%;
-        margin: 20px 0;
-    }
-    .contactos .cada a{
-        margin: 50px 0;
-    }
-
-    .sobre_nos .texto {
-        font-size: 14px;
-    }
-}
-
-/* Estilo do Menu Hambúrguer para dispositivos móveis */
-@media (max-width: 768px) {
-    /* Exibir o ícone de hambúrguer no mobile */
-    .hamburger {
-        display: block;
-    }
-
-    /* Esconder os links padrão no mobile */
-    .menu .link {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #ffffff;
-        position: absolute;
-        top: 80px;
-        right: 0; /* Menu vem da direita */
-        padding: 20px 0;
-    }
-
-    /* Exibir links ao ativar o menu hambúrguer */
-    .menu .link.active {
-        display: block;
-    }
-
-    /* Estilizar os links quando o menu estiver ativo */
-    .menu .link a {
-        color: black;
-        margin: 20px 0;
-        font-size: 20px;
-        width: 100%;
-        text-align: center;
-        display: block;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .menu .logo a {
-        font-size: 20px;
-    }
-
-    .menu .link a {
-        font-size: 14px;
-        margin: 5px 0;
-    }
-
-    .sobre_nos .texto {
-        width: 95%;
-    }
-
-    .contactos .cada {
-        width: 100%;
-        margin: 20px 0;
-    }
+.social-icon:hover {
+    color: #1DA1F2; /* Cor azul-clara ao passar o mouse (você pode ajustar) */
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
