@@ -17,6 +17,7 @@
         </div>
         <div class="links">
             <a href="#home">Início</a>
+            <a href="#servico">Servico</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#sobre">Sobre</a>
         </div>
@@ -28,6 +29,7 @@
         </div>
         <div class="links">
             <a href="#home">Início</a>
+            <a href="#servico">Servico</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#sobre">Sobre</a>
             <a href="https://www.facebook.com/profile.php?id=100063853777708" target="_blank"><i
@@ -36,7 +38,8 @@
                 target="_blank">
                 <i class="fab fa-whatsapp"></i> whatsapp
             </a>
-            <a href="https://www.instagram.com/horaciomanuel99/" target="_blank"><i class="fab fa-instagram"></i> instagram</a>
+            <a href="https://www.instagram.com/horaciomanuel99/" target="_blank"><i class="fab fa-instagram"></i>
+                instagram</a>
 
         </div>
     </div>
@@ -61,25 +64,35 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="servico">
         <div class="tema">
             <h1>Serviços</h1>
         </div>
         <div class="conteudo">
             <div class="cada">
-                <img src="/imagens/16.jpg" alt="Logotipo">
-                <h2>Criação de Logotipos</h2>
+                <img src="/imagens/27.jpg" alt="Postagem para Redes Sociais">
+                <h2>Posts</h2>
+                <div class="descricao">
+                    <p>Material visual impactante para fortalecer sua presença nas redes sociais.</p>
+                </div>
             </div>
             <div class="cada">
-                <img src="/imagens/27.jpg" alt="Flyers">
-                <h2>Flyers e Banners</h2>
+                <img src="/imagens/25.jpg" alt="Design de Stories">
+                <h2>Stories</h2>
+                <div class="descricao">
+                    <p>Designs exclusivos e personalizados para histórias de Instagram, Facebook, e mais.</p>
+                </div>
             </div>
             <div class="cada">
-                <img src="/imagens/13.jpg" alt="Web Design">
-                <h2>stampas e Caricaturas</h2>
+                <img src="/imagens/20.jpg" alt="Flyer Design">
+                <h2>Flyers</h2>
+                <div class="descricao">
+                    <p>Criação de flyers atraentes e informativos para divulgar seus eventos ou ofertas.</p>
+                </div>
             </div>
         </div>
     </div>
+
 
     <div class="section1" id="portfolio">
         <div class="tema">
@@ -87,19 +100,25 @@
         </div>
         <div class="conteudo">
             <div class="cada">
-                <img src="/imagens/10.jpg" alt="">
-                <img src="/imagens/12.jpg" alt="">
-                <img src="/imagens/13.jpg" alt="">
-                <img src="/imagens/14.jpg" alt="">
-                <img src="/imagens/15.jpg" alt="">
-                <img src="/imagens/16.jpg" alt="">
-                <img src="/imagens/17.jpg" alt="">
-                <img src="/imagens/18.jpg" alt="">
-                <img src="/imagens/19.jpg" alt="">
-                <img src="/imagens/20.jpg" alt="">
+                <img src="/imagens/1.jpg" alt="" data-src="/imagens/1.jpg">
+                <img src="/imagens/23.jpg" alt="" data-src="/imagens/23.jpg">
+                <img src="/imagens/15.png" alt="" data-src="/imagens/15.png">
+                <img src="/imagens/22.jpg" alt="" data-src="/imagens/22.jpg">
+                <img src="/imagens/20.jpg" alt="" data-src="/imagens/20.jpg">
+                <img src="/imagens/19.jpg" alt="" data-src="/imagens/19.jpg">
+                <img src="/imagens/26.jpg" alt="" data-src="/imagens/26.jpg">
+                <img src="/imagens/capa4.png" alt="" data-src="/imagens/capa4.png">
+                <img src="/imagens/21.jpg" alt="" data-src="/imagens/21.jpg">
+                <img src="/imagens/24.jpg" alt="" data-src="/imagens/24.jpg">
+                <img src="/imagens/27.jpg" alt="" data-src="/imagens/27.jpg">
             </div>
         </div>
     </div>
+
+    <div class="model">
+        <img src="" alt="">
+    </div>
+
 
     <div class="section2" id="sobre">
         <div class="organizar">
@@ -131,16 +150,66 @@
             <a href="https://www.instagram.com/horaciomanuel99/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
+
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.querySelector('.menu1 .logo a[ip="botao"]');
             const mobileLinks = document.querySelector('.menu1 .links');
+            const menuLinks = document.querySelectorAll('.menu1 .links a');
+            const menu = document.querySelector('.menu');
+            const menu1 = document.querySelector('.menu1');
 
+            // Toggle menu
             menuButton.addEventListener('click', function (e) {
                 e.preventDefault();
                 mobileLinks.classList.toggle('active');
+                this.style.transform = mobileLinks.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0)';
+            });
+
+            // Fechar menu ao clicar em links
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileLinks.classList.remove('active');
+                    menuButton.style.transform = 'rotate(0)';
+                });
+            });
+
+            // Efeito de scroll
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    menu?.classList.add('scrolled');
+                    menu1?.classList.add('scrolled');
+                } else {
+                    menu?.classList.remove('scrolled');
+                    menu1?.classList.remove('scrolled');
+                }
             });
         });
+    </script>
+    <script>
+        // Seleciona todas as imagens da galeria
+        const imagens = document.querySelectorAll('.section1 .conteudo .cada img');
+        const modal = document.querySelector('.model');
+        const modalImg = modal.querySelector('img');
+
+        // Função para abrir a modal com a imagem clicada
+        imagens.forEach(imagem => {
+            imagem.addEventListener('click', () => {
+                const src = imagem.getAttribute('data-src'); // Pega o src da imagem
+                modal.style.display = 'flex'; // Exibe a modal
+                modalImg.src = src; // Coloca a imagem na modal
+            });
+        });
+
+        // Função para fechar a modal ao clicar fora da imagem (na área preta)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none'; // Fecha a modal
+            }
+        });
+
     </script>
 
 </body>

@@ -1,106 +1,97 @@
-/* Desktop Menu Styles */
+/* Variáveis essenciais */
+:root {
+    --background-dark: rgba(17, 17, 17, 0.95);
+    --accent-color: #2196F3;
+    --text-primary: #ffffff;
+}
+
+/* Desktop Menu */
 .menu {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: var(--background-dark);
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     z-index: 99;
     width: 100%;
-    padding: 15px 5%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    padding: 16px 5%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .menu .logo a {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.menu .logo a:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 6px;
 }
 
 .menu .links {
     display: flex;
-    gap: 20px;
+    gap: 24px;
 }
 
 .menu .links a {
-    color: white;
+    color: var(--text-primary);
     padding: 8px 16px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    position: relative;
+    transition: 0.3s ease;
+    font-weight: 500;
 }
 
-.menu .links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+.menu .links a:hover {
+    color: var(--accent-color);
 }
 
-.menu .links a:hover::after {
-    width: 70%;
-}
-
-/* Mobile Menu Styles */
+/* Mobile Menu - Invisível em Desktop */
 .menu1 {
     display: none;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
     .menu {
         display: none;
     }
     
     .menu1 {
-        background-color: rgba(0, 0, 0, 0.95);
+        background-color: var(--background-dark);
         display: block;
         position: fixed;
         z-index: 99;
         width: 100%;
-        height: auto;
-        padding: 15px 5%;
-        transition: all 0.3s ease;
+        padding: 16px 5%;
     }
 
     .menu1 .logo {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 15px;
     }
 
     .menu1 .logo a[href="#"] {
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-weight: bold;
+        color: var(--text-primary);
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 12px 20px;
+        border-radius: 6px;
     }
 
-    .menu1 .logo a {
-        color: white;
-        font-size: 15px;
-        padding: 5px 15px;
-        cursor: pointer;
-        transition: all 0.3s ease;
+    .menu1 .logo a[ip="botao"] {
+        color: var(--text-primary);
+        font-size: 1.5rem;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
     }
 
     .menu1 .links {
         display: none;
-        padding: 10px 0;
-        transition: all 0.3s ease;
+        padding: 16px 0;
+        margin-top: 16px;
     }
 
     .menu1 .links.active {
@@ -108,25 +99,21 @@
     }
 
     .menu1 .links a {
-        color: white;
-        display: block;
-        padding: 12px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        transition: 0.3s ease;
     }
 
-    .menu1 .links a:last-child {
-        border-bottom: none;
+    .menu1 .links a i {
+        width: 24px;
+        text-align: center;
     }
 
     .menu1 .links a:hover {
-        padding-left: 10px;
-        background-color: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.1);
+        padding-left: 24px;
     }
-}
-
-/* Responsive Menu Button Styles */
-
-#botao {
-    color: black;
 }
