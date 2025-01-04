@@ -19,35 +19,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Menu */
-.menu {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.616);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 30px 10px;
-    z-index: 10;
-}
-
-.menu .logo a {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.menu .links a {
-    color: white;
-    padding: 10px;
-    font-size: 18px;
-}
-
-.menu .links a:hover {
-    color: #f0f0f0;
-}
-
 /* Banner */
 .banner {
     padding: 50px 0;
@@ -214,4 +185,5 @@ body {
 .section3 .social a:nth-child(5):hover {
     color: #FF0000; /* Vermelho do YouTube */
 }
+/*55555555555555555555555555555555555555555555555555*/
 

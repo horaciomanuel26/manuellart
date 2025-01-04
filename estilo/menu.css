@@ -1,19 +1,132 @@
-.menu{
+/* Desktop Menu Styles */
+.menu {
+    background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     align-items: center;
-    justify-content: space-around;
-
-    padding: 30px 0;
-    background-color: #000000d0;
-
+    justify-content: space-between;
     position: fixed;
+    z-index: 99;
     width: 100%;
-}
-.menu .logo a{
-    color: white;
-}
-.menu .links a{
-    color: white;
-    margin: 10px;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
+.menu .logo a {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.menu .logo a:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.menu .links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu .links a {
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu .links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.menu .links a:hover::after {
+    width: 70%;
+}
+
+/* Mobile Menu Styles */
+.menu1 {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .menu1 {
+        background-color: rgba(0, 0, 0, 0.95);
+        display: block;
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        height: auto;
+        padding: 15px 5%;
+        transition: all 0.3s ease;
+    }
+
+    .menu1 .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .menu1 .logo a[href="#"] {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .menu1 .logo a {
+        color: white;
+        font-size: 15px;
+        padding: 5px 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .menu1 .links {
+        display: none;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu1 .links.active {
+        display: block;
+    }
+
+    .menu1 .links a {
+        color: white;
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .menu1 .links a:last-child {
+        border-bottom: none;
+    }
+
+    .menu1 .links a:hover {
+        padding-left: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Responsive Menu Button Styles */
+
+#botao {
+    color: black;
+}

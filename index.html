@@ -7,10 +7,11 @@
     <title>Manuellart</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/estilo/style.css">
+    <link rel="stylesheet" href="/estilo/menu.css">
 </head>
 
 <body>
-    <div class="menu">
+    <div class="menu" ip="pc">
         <div class="logo">
             <a href="#">MANUELLART</a>
         </div>
@@ -20,8 +21,27 @@
             <a href="#sobre">Sobre</a>
         </div>
     </div>
+    <div class="menu1" ip="telefone">
+        <div class="logo">
+            <a href="#">MANUELLART</a>
+            <a href="#" ip="botao">:::</a>
+        </div>
+        <div class="links">
+            <a href="#home">Início</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="https://www.facebook.com/profile.php?id=100063853777708" target="_blank"><i
+                    class="fab fa-facebook"></i> facebbok</a>
+            <a href="https://wa.me/244942347516?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Manuellart."
+                target="_blank">
+                <i class="fab fa-whatsapp"></i> whatsapp
+            </a>
+            <a href="https://www.instagram.com/horaciomanuel99/" target="_blank"><i class="fab fa-instagram"></i> instagram</a>
 
-    <div class="banner">
+        </div>
+    </div>
+
+    <div class="banner" id="home">
         <div class="escuro"></div>
         <div class="descricao">
             <h2>
@@ -33,7 +53,9 @@
                 Unindo inovação e criatividade para sua marca <br>
                 Transformando ideias em realidade através do design <br>
             </p>
-            <a class="btn1" href="https://wa.me/244942347516?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Manuellart." target="_blank">
+            <a class="btn1"
+                href="https://wa.me/244942347516?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Manuellart."
+                target="_blank">
                 Entrar em Contacto
             </a>
         </div>
@@ -59,7 +81,7 @@
         </div>
     </div>
 
-    <div class="section1">
+    <div class="section1" id="portfolio">
         <div class="tema">
             <h2>Portfolio</h2>
         </div>
@@ -79,15 +101,17 @@
         </div>
     </div>
 
-    <div class="section2">
+    <div class="section2" id="sobre">
         <div class="organizar">
             <div class="tema">
                 <h3>Sobre nós</h3>
             </div>
             <div class="descricao">
                 <p>
-                    Na Manuellart, acreditamos que cada projeto é uma oportunidade para criar algo único e significativo.
-                    Somos especialistas em design gráfico, web design e interfaces visuais (UI/UX). Nossa missão é transformar ideias em soluções criativas que conectem marcas com seu público.
+                    Na Manuellart, acreditamos que cada projeto é uma oportunidade para criar algo único e
+                    significativo.
+                    Somos especialistas em design gráfico, web design e interfaces visuais (UI/UX). Nossa missão é
+                    transformar ideias em soluções criativas que conectem marcas com seu público.
                 </p>
             </div>
         </div>
@@ -98,13 +122,26 @@
             <h3>Entre em contato</h3>
             <p>Email: contato@manuellart.com</p>
             <p>Telefone: +244 942 347 516</p>
-            <a href="https://www.facebook.com/profile.php?id=100063853777708" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/244942347516?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Manuellart." target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100063853777708" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/244942347516?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Manuellart."
+                target="_blank">
                 <i class="fab fa-whatsapp"></i>
             </a>
             <a href="https://www.instagram.com/horaciomanuel99/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('.menu1 .logo a[ip="botao"]');
+            const mobileLinks = document.querySelector('.menu1 .links');
+
+            menuButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                mobileLinks.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 
