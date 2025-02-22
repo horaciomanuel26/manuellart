@@ -5,213 +5,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manuellart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/estilo/style.css">
-    <link rel="stylesheet" href="/estilo/menu.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+        }
+        
+        .menu {
+            position: fixed;
+            background-color: #00223f;
+            width: 100%;
+            height: 60px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 20px;
+            color: white;
+            z-index: 1000;
+        }
+        
+        .menu .logo h1 {
+            font-size: 24px;
+        }
+        
+        .menu .links a {
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+            font-size: 16px;
+        }
+        
+        .menu .links a:hover {
+            background-color: #003767;
+        }
+        
+        .banner {
+            background: url('/imagens/capa4_1.png') center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .banner .descricao {
+            max-width: 600px;
+            font-size: 20px;
+        }
+        
+        .tema {
+            text-align: center;
+            font-size: 28px;
+            margin: 50px auto;
+            padding: 10px;
+            border-bottom: 4px solid #003767;
+            color: #00223f;
+            width: 500px;
+        }
+        
+        .sobre {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+        
+        .sobre .imagem {
+            width: 30%;
+        }
+        
+        .sobre .imagem img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .sobre .descricao {
+            width: 50%;
+            font-size: 20px;
+            color: #00223f;
+            padding: 20px;
+        }
+        
+        .portfolio {
+            background-color: #cbdae7;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .portfolio .tudo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .portfolio .tudo .cada {
+            width: 280px;
+            height: 280px;
+        }
+        
+        .portfolio .tudo .cada img {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+        
+        .footer {
+            background-color: #00223f;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+            .menu .links {
+                margin-top: 10px;
+            }
+            .sobre {
+                flex-direction: column;
+                text-align: center;
+            }
+            .sobre .imagem,
+            .sobre .descricao {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="menu" ip="pc">
+    <div class="menu">
         <div class="logo">
-            <a href="#">MANUELLART</a>
+            <h1>Manuellart</h1>
         </div>
         <div class="links">
-            <a href="#home">Início</a>
-            <a href="#servico">Servico</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#inicio">Home</a>
             <a href="#sobre">Sobre</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#footer">Contactos</a>
         </div>
     </div>
-    <div class="menu1" ip="telefone">
-        <div class="logo">
-            <a href="#">MANUELLART</a>
-            <a href="#" ip="botao">:::</a>
-        </div>
-        <div class="links">
-            <a href="#home">Início</a>
-            <a href="#servico">Servico</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#sobre">Sobre</a>
-            <a href="https://www.facebook.com/profile.php?id=100063853777708" target="_blank"><i
-                    class="fab fa-facebook"></i> facebbok</a>
-            <a href="https://wa.me/244942347516?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Manuellart."
-                target="_blank">
-                <i class="fab fa-whatsapp"></i> whatsapp
-            </a>
-            <a href="https://www.instagram.com/horaciomanuel99/" target="_blank"><i class="fab fa-instagram"></i>
-                instagram</a>
-
-        </div>
-    </div>
-
-    <div class="banner" id="home">
-        <div class="escuro"></div>
+    
+    <div class="banner" id="inicio">
         <div class="descricao">
-            <h2>
-                MANUELLART <br>
-            </h2>
-            <p>
-                Designer Gráfico e Web Design <br>
-                Criando experiências visuais marcantes <br>
-                Unindo inovação e criatividade para sua marca <br>
-                Transformando ideias em realidade através do design <br>
-            </p>
-            <a class="btn1"
-                href="https://wa.me/244942347516?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Manuellart."
-                target="_blank">
-                Entrar em Contacto
-            </a>
+            <h1>Bem-vindo à Manuellart</h1>
+            <p>Somos especialistas em design e web design, criando soluções inovadoras para destacar sua identidade visual.</p>
         </div>
     </div>
-
-    <div class="section" id="servico">
-        <div class="tema">
-            <h1>Serviços</h1>
+    
+    <h1 class="tema">Sobre Nós</h1>
+    
+    <div class="sobre" id="sobre">
+        <div class="imagem">
+            <img src="/imagens/website-designer-bro-purple.svg" alt="Sobre a empresa">
         </div>
-        <div class="conteudo">
-            <div class="cada">
-                <img src="/imagens/27.jpg" alt="Postagem para Redes Sociais">
-                <h2>Posts</h2>
-                <div class="descricao">
-                    <p>Material visual impactante para fortalecer sua presença nas redes sociais.</p>
-                </div>
-            </div>
-            <div class="cada">
-                <img src="/imagens/25.jpg" alt="Design de Stories">
-                <h2>Stories</h2>
-                <div class="descricao">
-                    <p>Designs exclusivos e personalizados para histórias de Instagram, Facebook, e mais.</p>
-                </div>
-            </div>
-            <div class="cada">
-                <img src="/imagens/20.jpg" alt="Flyer Design">
-                <h2>Flyers</h2>
-                <div class="descricao">
-                    <p>Criação de flyers atraentes e informativos para divulgar seus eventos ou ofertas.</p>
-                </div>
-            </div>
+        <div class="descricao">
+            <p>Na Manuellart, combinamos criatividade e tecnologia para oferecer serviços de design gráfico, web design e UI/UX com qualidade e inovação.</p>
         </div>
     </div>
-
-
-    <div class="section1" id="portfolio">
-        <div class="tema">
-            <h2>Portfolio</h2>
+    <div class="sobre" id="sobre">
+        <div class="descricao">
+            <p>Na Manuellart, combinamos criatividade e tecnologia para oferecer serviços de design gráfico, web design e UI/UX com qualidade e inovação.</p>
         </div>
-        <div class="conteudo">
-            <div class="cada">
-                <img src="/imagens/1.jpg" alt="" data-src="/imagens/1.jpg">
-                <img src="/imagens/23.jpg" alt="" data-src="/imagens/23.jpg">
-                <img src="/imagens/15.png" alt="" data-src="/imagens/15.png">
-                <img src="/imagens/22.jpg" alt="" data-src="/imagens/22.jpg">
-                <img src="/imagens/20.jpg" alt="" data-src="/imagens/20.jpg">
-                <img src="/imagens/19.jpg" alt="" data-src="/imagens/19.jpg">
-                <img src="/imagens/26.jpg" alt="" data-src="/imagens/26.jpg">
-                <img src="/imagens/capa4.png" alt="" data-src="/imagens/capa4.png">
-                <img src="/imagens/21.jpg" alt="" data-src="/imagens/21.jpg">
-                <img src="/imagens/24.jpg" alt="" data-src="/imagens/24.jpg">
-                <img src="/imagens/27.jpg" alt="" data-src="/imagens/27.jpg">
-            </div>
+        <div class="imagem">
+            <img src="/imagens/16_logo.png" alt="Sobre a empresa">
         </div>
     </div>
-
-    <div class="model">
-        <img src="" alt="">
-    </div>
-
-
-    <div class="section2" id="sobre">
-        <div class="organizar">
-            <div class="tema">
-                <h3>Sobre nós</h3>
-            </div>
-            <div class="descricao">
-                <p>
-                    Na Manuellart, acreditamos que cada projeto é uma oportunidade para criar algo único e
-                    significativo.
-                    Somos especialistas em design gráfico, web design e interfaces visuais (UI/UX). Nossa missão é
-                    transformar ideias em soluções criativas que conectem marcas com seu público.
-                </p>
-            </div>
+    
+    <h1 class="tema">Nosso Portfólio</h1>
+    
+    <div class="portfolio" id="portfolio">
+        <div class="tudo">
+            <div class="cada"><img src="/imagens/19.jpg" alt="Projeto 1"></div>
+            <div class="cada"><img src="imagens/20.jpg" alt="Projeto 2"></div>
+            <div class="cada"><img src="imagens/21.jpg" alt="Projeto 3"></div>
+            <div class="cada"><img src="imagens/25.jpg" alt="Projeto 4"></div>
+            <div class="cada"><img src="imagens/26.jpg" alt="Projeto 5"></div>
+            <div class="cada"><img src="imagens/27.jpg" alt="Projeto 6"></div>
+            <div class="cada"><img src="imagens/24.jpg" alt="Projeto 7"></div>
+            <div class="cada"><img src="imagens/1.jpg" alt="Projeto 8"></div>
         </div>
     </div>
-
-    <div class="section3">
-        <div class="social">
-            <h3>Entre em contato</h3>
-            <p>Email: contato@manuellart.com</p>
-            <p>Telefone: +244 942 347 516</p>
-            <a href="https://www.facebook.com/profile.php?id=100063853777708" target="_blank"><i
-                    class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/244942347516?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Manuellart."
-                target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://www.instagram.com/horaciomanuel99/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
+    
+    <div class="footer" id="footer">
+        <p>&copy; 2025 Manuellart - Todos os direitos reservados.</p>
     </div>
-
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuButton = document.querySelector('.menu1 .logo a[ip="botao"]');
-            const mobileLinks = document.querySelector('.menu1 .links');
-            const menuLinks = document.querySelectorAll('.menu1 .links a');
-            const menu = document.querySelector('.menu');
-            const menu1 = document.querySelector('.menu1');
-
-            // Toggle menu
-            menuButton.addEventListener('click', function (e) {
-                e.preventDefault();
-                mobileLinks.classList.toggle('active');
-                this.style.transform = mobileLinks.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0)';
-            });
-
-            // Fechar menu ao clicar em links
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    mobileLinks.classList.remove('active');
-                    menuButton.style.transform = 'rotate(0)';
-                });
-            });
-
-            // Efeito de scroll
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 50) {
-                    menu?.classList.add('scrolled');
-                    menu1?.classList.add('scrolled');
-                } else {
-                    menu?.classList.remove('scrolled');
-                    menu1?.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
-    <script>
-        // Seleciona todas as imagens da galeria
-        const imagens = document.querySelectorAll('.section1 .conteudo .cada img');
-        const modal = document.querySelector('.model');
-        const modalImg = modal.querySelector('img');
-
-        // Função para abrir a modal com a imagem clicada
-        imagens.forEach(imagem => {
-            imagem.addEventListener('click', () => {
-                const src = imagem.getAttribute('data-src'); // Pega o src da imagem
-                modal.style.display = 'flex'; // Exibe a modal
-                modalImg.src = src; // Coloca a imagem na modal
-            });
-        });
-
-        // Função para fechar a modal ao clicar fora da imagem (na área preta)
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none'; // Fecha a modal
-            }
-        });
-
-    </script>
-
 </body>
 
 </html>
